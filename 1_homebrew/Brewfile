@@ -1,0 +1,71 @@
+# インストール先の指定
+cask_args appdir: "/Applications"
+
+# 外部ライブラリをインストール
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+
+# CLIアプリケーションの管理
+brew "ag"
+brew "asdf"
+brew "awscli"
+# custom: brew "aws-elasticbeanstalk"
+brew "bat"
+brew "coreutils"
+brew "curl"
+brew "docker"
+brew "ffmpeg"
+brew "fzf"
+brew "git"
+brew "git-lfs"
+brew "git-secrets"
+brew "gpg"
+brew "hstr"
+brew "hugo"
+brew "imagemagick"
+brew "jq"
+brew "jump"
+brew "mas"
+brew "qpdf"
+brew "shellcheck"
+brew "telnet"
+brew "tree"
+brew "yarn"
+brew "wget"
+
+# デスクトップアプリケーションの管理
+cask "adobe-acrobat-reader"
+cask "alfred"
+cask "appcleaner"
+cask "authy"
+cask "chatwork"
+cask "clipy"
+cask "docker"
+cask "drawio"
+cask "figma"
+cask "firefox"
+cask "google-chrome"
+cask "google-drive"
+cask "google-japanese-ime"
+cask "notion"
+cask "postman"
+cask "visual-studio-code"
+cask "slack"
+cask "sourcetree"
+cask "spotify"
+cask "tableplus"
+cask "warp"
+cask "zoom"
+
+# fonts
+cask "font-latin-modern"
+cask "font-latin-modern-math"
+
+# Mac App Storeのアプリケーションを管理
+mas "Bitwarden", id: 1352778147
+mas "Display Menu", id: 549083868
+mas 'LINE', id: 539883307
