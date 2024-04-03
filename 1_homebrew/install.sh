@@ -54,9 +54,13 @@ s_manpath="/opt/homebrew/opt/coreutils/libexec/gnuman:${s_manpath}"
 s_path="/opt/homebrew/opt/curl/bin:${s_path}"
 
 #shellcheck disable=SC2016
-echo "export PATH=\"${s_path}"'$PATH"' >> ~/.zshrc
+if ! grep -q -v "export PATH=" ~/.zshrc; then
+    echo "export PATH=\"${s_path}"'$PATH"' >> ~/.zshrc
+fi
 #shellcheck disable=SC2016
-echo "export MANPATH=\"${s_manpath}"'$MANPATH"' >> ~/.zshrc
+if ! grep -q -v "export MANPATH=" ~/.zshrc; then
+  echo "export MANPATH=\"${s_manpath}"'$MANPATH"' >> ~/.zshrc
+fi
 #shellcheck disable=SC1090
 . ~/.zshrc
 

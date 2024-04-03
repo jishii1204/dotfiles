@@ -13,14 +13,23 @@ ln -sfv "$PWD"/5_vscode/settings.json ~/Library/Application\ Support/Code/User/
 
 # プラグインのインストール
 pkglist=(
+  # for Common
   alefragnani.project-manager	# Project Manager
   editorconfig.editorconfig # EditorConfig for VS Code
+  esbenp.prettier-vscode # Prettier - Code formatter
   gruntfuggly.todo-tree # Todo Tree
+  mechatroner.rainbow-csv # Rainbow CSV
+	moshfeu.compare-folders # Compare Folders
   ms-azuretools.vscode-docker # Docker
   ms-ceintl.vscode-language-pack-ja # Japanese Language Pack for Visual Studio Code
+  ms-vscode-remote.remote-containers # Dev Containers
   ms-vscode-remote.remote-ssh-edit # Remote - SSH: Editing Configuration Files
+  oderwat.indent-rainbow # indent-rainbow
+	svipas.prettier-plus # Prettier+
   vscode-icons-team.vscode-icons # vscode-icons
-  wakatime.vscode-wakatime # WakaTime
+  # for Ruby on Rails
+  karunamurti.haml # Better Haml
+	Shopify.ruby-lsp # Ruby LSP
 )
 
 for i in "${pkglist[@]}"; do
