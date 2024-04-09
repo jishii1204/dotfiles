@@ -1,7 +1,7 @@
 Dotfiles for Mac
 ====
 
-thanks https://github.com/kurubi-hornet/dotfiles-mac/
+thanks https://github.com/karubi-hornet/dotfiles-mac
 
 ## 実行されること
 * homebrewを用いたパッケージのインストール

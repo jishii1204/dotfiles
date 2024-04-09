@@ -1,6 +1,6 @@
 [core]
 	# gitignoreの場所
-	excludesfile = /Users/j.ishii/.gitignore
+	excludesfile = /Users/jishii1204/.gitignore
 	# 改行コードの自動変換をしない
 	autocrlf = false
 	# ファイル名の大文字と小文字を区別する
@@ -21,7 +21,7 @@
 
 [user]
 	name = Jun Ishii
-	email = j.ishii@le-tech.jp
+	email = jishii1204@gmail.com
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -29,4 +29,4 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	template = /Users/j.ishii/.stCommitMsg
+	template = /Users/jishii1204/.stCommitMsg

@@ -10,8 +10,10 @@ if ! (type asdf > /dev/null 2>&1); then
 fi
 
 # add to shell
-echo ". $(brew --prefix asdf)/libexec/asdf.sh" >> ~/.zshrc
-. ~/.zshrc
+if ! grep -q -v "libexec/asdf.sh" ~/.zshrc; then
+  echo ". $(brew --prefix asdf)/libexec/asdf.sh" >> ~/.zshrc
+  . ~/.zshrc
+fi
 
 # Default Packages
 basename -a "$PWD"/2_asdf/.default-* | xargs -I{} ln -sfv "$PWD"/2_asdf/{} ~/{}
@@ -40,5 +42,12 @@ asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 # Install Ruby
 RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" LDFLAGS="-L/opt/homebrew/opt/readline/lib" CPPFLAGS="-I/opt/homebrew/opt/readline/include" PKG_CONFIG_PATH="/opt/homebrew/opt/readline/lib/pkgconfig" optflags="-Wno-error=implicit-function-declaration" LDFLAGS="-L/opt/homebrew/opt/libffi/lib" CPPFLAGS="-I/opt/homebrew/opt/libffi/include" PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" RUBY_CFLAGS="-w" asdf install ruby 2.7.3
 asdf global ruby "$(asdf list ruby | tail -1 | sed -e 's/ //g')"
+
+# === asdf-golang ===
+# Install plugin
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+# Install Node.js
+asdf install golang latest
+asdf global golang "$(asdf list golang | tail -1 | sed -e 's/ //g')"
 
 echo "👍 asdf install is done!"

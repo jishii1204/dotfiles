@@ -22,11 +22,16 @@ pkglist=(
 	moshfeu.compare-folders # Compare Folders
   ms-azuretools.vscode-docker # Docker
   ms-ceintl.vscode-language-pack-ja # Japanese Language Pack for Visual Studio Code
+  ms-vscode.makefile-tools # Makefile Tools
   ms-vscode-remote.remote-containers # Dev Containers
   ms-vscode-remote.remote-ssh-edit # Remote - SSH: Editing Configuration Files
   oderwat.indent-rainbow # indent-rainbow
 	svipas.prettier-plus # Prettier+
   vscode-icons-team.vscode-icons # vscode-icons
+  # for Golang
+	golang.Go # Go
+  windmilleng.vscode-go-autotest # Go Autotest
+  766b.go-outliner # Go Outliner
   # for Ruby on Rails
   karunamurti.haml # Better Haml
 	Shopify.ruby-lsp # Ruby LSP
